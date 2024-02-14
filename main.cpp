@@ -12,7 +12,7 @@ int main() {
      ***********************************************/
 
     // make a pointer to an int
-    int *myIntArray;
+    int *myIntArray = nullptr;
     // allocate the array
     myIntArray = new int[SIZE];
     // initialize it with 1,2,3,4,5
@@ -27,14 +27,14 @@ int main() {
 
     //destroy the array, but remember the pointer is still there and usable
     delete[] myIntArray;
+    myIntArray = nullptr;
 
-    
-    /***********************************************
+        /***********************************************
      * create a 2D array of integers dynamically
      ***********************************************/
 
     // make a pointer to a pointer to an int
-    int **my2dIntArray;
+    int **my2dIntArray = nullptr;
     // allocate the rows
     my2dIntArray = new int*[ROWS];
     // allocate the columns
@@ -65,7 +65,7 @@ int main() {
         delete[] my2dIntArray[i];
     }
     delete[] my2dIntArray;
-
+    my2dIntArray = nullptr;
 
     /***********************************************
      * use pointers and dynamic memory with an ADT
