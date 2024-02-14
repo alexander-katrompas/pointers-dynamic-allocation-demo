@@ -91,7 +91,7 @@ int main() {
     // dynamically create an array of Data structs
 
     // create a pointer to Data
-    Data *myDataArray;
+    Data *myDataArray = nullptr;
     // allocate the array
     myDataArray = new Data[SIZE];
 
@@ -105,6 +105,7 @@ int main() {
     // EXERCISE: Dynamically create a 2D array of Data structs, a function
     // to fill it with values, and a function to print them all.
     // *****************************************************************
-    
+    delete[] myDataArray;
+    myDataArray = nullptr;
     return 0;
 }
