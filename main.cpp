@@ -26,7 +26,7 @@ int main() {
     cout << endl;
 
     //destroy the array, but remember the pointer is still there and usable
-    delete myIntArray;
+    delete[] myIntArray;
 
     
     /***********************************************
@@ -64,7 +64,7 @@ int main() {
     for (int i = 0; i < ROWS; i++) {
         delete my2dIntArray[i];
     }
-    delete my2dIntArray;
+    delete[] my2dIntArray;
 
 
     /***********************************************
